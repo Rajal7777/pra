@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Box Hub</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      width: 100%;
+      padding: 40px 20px;
+      text-align: center;
+      background-color: rgb(5, 27, 5);
+      color: white;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: whitesmoke;
+   
+    }
+
+    .nav a {
+      padding: 15px 20px;
+      color: rgb(194, 104, 104);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: black;
+      background-color: rgb(150, 132, 132);
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .right {
+      flex: 30%;
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+
+    .left {
+      flex: 70%;
+      padding: 20px;
+    }
+
+    .image {
+      background-color: #aaa;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .img {
+      background-color: #e98787;
+      margin: 15px 0;
+      padding: 15px;
+    }
+
+    .img img {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .footer {
+      background-color: #aaa;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+
+      .right,
+      .left {
+        flex: 100%;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+      }
+
+      .image,
+      .img {
+        margin-bottom: 15px;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .header {
+        padding: 20px;
+      }
+
+      .footer {
+        padding: 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>This is Flexbox</h1>
+    <p>With a <b>flexible</b> layout</p>
+  </div>
+
+  <div class="nav">
+    <a href="#">HOME</a>
+    <a href="#">SEARCH</a>
+    <a href="#">CONTACT</a>
+    <a href="#">ABOUT</a>
+  </div>
+
+  <div class="main">
+    <div class="right">
+      <h2>ABOUT ME</h2>
+      <p>These are some photos</p>
+
+      <div class="image">
+        <img src="thumb_case_01.jpg" alt="This is my journey">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, atque.</p>
+      </div>
+
+      <div class="img">
+        <img src="thumb_case_01.jpg" alt="">
+        <p>This is the image 1</p>
+      </div>
+      <div class="img">
+        <img src="thumb_case_01.jpg" alt="">
+        <p>This is the image 2</p>
+      </div>
+      <div class="img">
+        <img src="thumb_case_01.jpg" alt="">
+        <p>This is the image 3</p>
+      </div>
+    </div>
+
+    <div class="left">
+      <h2>ABOUT ME</h2>
+      <p>These are some photos</p>
+
+      <div class="image">
+        <img src="thumb_case_01.jpg" alt="This is my journey">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, atque.</p>
+      </div>
+
+      <div class="image">
+        <img src="thumb_case_01.jpg" alt="This is my journey">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, atque.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h2>Footer</h2>
+  </div>
+</body>
+</html>

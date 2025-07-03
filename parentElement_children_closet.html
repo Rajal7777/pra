@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <style>
+    .answer {
+        display: none;
+    }
+ </style>
+
+<body>
+    <ul>
+        <li class="list">Apple <span class="close">❌</span></li>
+    </ul>
+
+<ul class="menu">
+    <li>Home</li>
+    <li>About</li> 
+    <li>contact</li>
+</ul>
+<p class="question">What is the color</p>
+<p class="answer">white</p>
+
+</body>
+<script>
+    const closeBtn = document.querySelector(".close");
+    closeBtn.addEventListener("click", function(){
+        closeBtn.closest(".list").remove();  //to select the closest element with class list    
+    })
+
+
+    const menu = document.querySelector(".menu");
+    menu.children[0].style.color = "red";
+
+
+    const question = document.querySelector(".question");
+    question.addEventListener("click", function(){
+        question.nextElementSibling.classList.toggle("answer");  //to select the next element sibiling
+    })
+
+     
+</script>
+</html> 

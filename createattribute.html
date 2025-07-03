@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li>home</li>
+        <li>town</li>
+        <li>smile</li>
+    </ul>
+    <!-- we will make attribute using javaScript like <p> -->
+    <script>
+        // let alphabet = document.createElement("p");
+        // alphabet.textContent = "Here is the alphabet: A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z";
+        // document.body.appendChild(alphabet);
+        //this is to 
+        // const point = document.createElement("li");
+        // point.textContent = "song";
+        // const parent = document.getElementById("list");
+        // parent.appendChild(point);
+        // parent.prepend(point);
+
+   const newList = list.cloneNode(true);
+   
+    document.body.appendChild(newList);
+    </script>
+
+</body>
+
+</html>

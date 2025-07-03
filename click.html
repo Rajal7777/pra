@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .hide {
+      display: none;
+    }
+</style>
+<body>
+
+
+    <h1 id="h" style="text-align: center; ">This is Java Script</h1>
+    <p class="hide" id="hide" style="font-size:20px;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minus magnam repellendus neque totam hic perferendis, asperiores accusamus quam fuga id ducimus voluptatem, molestias vitae! Repellat esse doloribus eius voluptas?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut eos hic, expedita numquam ratione, obcaecati ad rerum autem voluptatem, impedit blanditiis molestias soluta vitae. Ipsum debitis, in sunt laudantium esse perspiciatis officia iure qui enim totam molestias laboriosam et ullam. Cumque architecto natus omnis rem labore tenetur cupiditate reiciendis voluptates!
+    </p>
+    
+    <button id="check">click me</button>
+
+    <a href='https://www.google.com/' id="go">push Here</a>
+</body>
+<script>
+    // let button = document.getElementById("check");
+    // button.addEventListener("click", function() {
+    //     alert("i am clicked!")
+    // })
+    let para = document.getElementById("h");
+    let originalText = para.textContent;
+    let index = 0;
+    function showLettter() {
+        if (index < originalText.length) {
+            para.textContent = originalText.slice(0, index + 1);
+            index++;
+        } else {
+            index=0;
+        }
+    }
+    let interval = setInterval(showLettter, 400);
+    
+
+    //catching the hidden paragraph by id then we delete the #class 
+    let show = document.getElementById("hide");
+    let button = document.getElementById("check");
+    button.addEventListener("click", function() {
+        show.classList.toggle("hide");
+    })
+
+
+    //we will try to stop the link  to go to google
+    //here the e=>"event" parameter e=>"event object" while explaining prevent default
+    let stop = document.getElementById("go");
+    stop.addEventListener("click", function(e){
+      e.preventDefault();
+      alert("You are not allowed to go to google");
+
+     })
+    
+</script>
+</html> 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="data"></p>
+
+<body>
+    <script>
+
+        //  const fruits = ["apple", "banana", "orange", "papaya"];
+        //  fruits[2]= "rambotan"
+        //  fruits.shift();
+        // //  console.log(fruits[1])
+        //  console.log(fruits[0])
+        //  console.log(fruits);
+        //  fruits.push("mango")
+
+
+        // const numbers = [10,20,30,40,50];
+        // numbers.forEach(function   (number) 
+        // {
+        //     console.log(number*0.1);
+        // })
+
+        //from here is the map() function
+
+        //  const numbers = [1,2,3,4,5];
+        //  const stringArray = numbers.map((value, index, array) => {
+        //     return "number is " + value;
+        //  });
+        //  console.log(stringArray)
+
+
+
+        //this is for the understanding
+        // const numbers = [1,2,3,4,5];
+        // const doubled = numbers.map(function(number) {
+        //     return number*2;
+        // });
+
+        // const numbers = [1,2,3,4,5];
+        // const doubled = numbers.map(number => number *2);
+        //    console.log(numbers);
+        //    console.log(doubled); 
+
+        //     const vegtetables = ["potato","peas","tofu"];
+        //    const capitals = vegtetables.map(vegetable => vegetable.toUpperCase());
+        //    console.log(capitals)
+
+        // const fruits = ["apple", "banana", "cherry"];
+        //     const lengths = fruits.map(fruit => fruit.length);
+        //     console.log(lengths);  // Output: [5, 6, 6]
+
+        //    const names = ["tom", "harry", "spice"];
+        //    const dex = names.map((name,index) => `${name}  ${index+1}`);
+        //    console.log(dex)
+
+
+        //   const  users = [
+        //     {name: "Rama", age: 25},
+        //     {name:"bob", age:30}
+        //   ];
+        // //   const newusers = users.map(user => user.name);
+        // //   const newages = users.map(user => user.age);
+        // //   console.log(newusers);
+        // //   console.log(newages)
+
+        // const userinfo = users.map(user => ({name: user.name, age:user.age }))
+        // console.log(userinfo)
+  
+            const dates = ["2025-06-28", "2025-07-01", "2025-07-05"];
+            const newdates = dates.map(date =>{
+                const line_date= date.split("-");
+                console.log(line_date)
+                console.log(line_date[0])
+            return `${line_date[2]}/${line_date[1]}/${line_date[0]}`
+        
+        
+        })
+            
+            console.log(newdates)
+
+    </script>
+</body>
+
+</html>

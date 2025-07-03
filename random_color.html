@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+  body {
+    text-align: center;
+    cursor: pointer;
+    transition:background-color 0.2s ease  ;
+  }
+  #btn { cursor: pointer; }
+</style>
+
+<body>
+    <h1>Give your life a diffenrent color</h1>
+    <button id="btn">ADD COLOR</button>
+</body>
+  <script>
+const colors = [
+  "#FFB6C1", // Light Pink
+  "#FFFFE0", // Light Yellow
+  "#ADD8E6", // Light Blue
+  "#90EE90", // Light Green
+  "#E6E6FA", // Lavender
+  "#FFE4E1", // Misty Rose
+  "#F08080", // Light Coral
+  "#E0FFFF", // Light Cyan
+  "#FFFACD", // Lemon Chiffon
+  "#F0F8FF"  // Alice Blue
+];
+
+let slower = document.querySelector("h1");
+const original = slower.textContent;
+
+let index = 33;
+function showletter() {
+  if (index < original.length) {
+    slower.textContent = original.slice(0, index +1);
+
+    index++;
+  } else {
+    index = 0;
+    // slower.textContent = "";
+  }
+}
+let interval = setInterval(showletter, 300);
+
+
+const button = document.getElementById("btn").addEventListener("click", function() {
+  
+  const randomNumber = Math.floor(Math.random() * colors.length);
+  document.body.style.backgroundColor = colors[randomNumber];
+  console.log(colors[randomNumber]);
+       
+  });
+
+  </script>
+
+</html>
